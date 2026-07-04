@@ -1,53 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <main class="todo">
+      <h1>Notes App</h1>
 
-        <h1>Notes App</h1>
-        
-        <div class="search-container">
-            <label for="search">Search Notes</label>
-            <input type="text" name="search" id="search" placeholder="Search Notes...">
+      <div class="search-container">
+        <label for="search">Search Notes</label>
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Search Notes..."
+        />
+      </div>
+
+      <div class="add-note">
+        <button id="add_note">+ Add Note</button>
+      </div>
+
+      <div class="modal hidden">
+        <div class="modal-content">
+          <input type="text" placeholder="Title" id="title" />
+          <textarea id="content" placeholder="Write your note..."></textarea>
+          <button id="save">Save</button>
+          <button id="cancel">Cancel</button>
         </div>
+      </div>
 
-        <div class="add-note">
-            <button>+ Add Note</button>
-        </div>
+      <section class="notes-container">
+        <article class="note">
+          <h3>Shopping</h3>
+          <p>Buy Milk</p>
+          <div class="actions">
+            <button>Edit</button>
+            <button>Delete</button>
+            <button>Copy</button>
+          </div>
+        </article>
 
-        
-
-        <section class="notes-container">
-
-            <article class="note">
-                <h3>Shopping</h3>
-                <p>Buy Milk</p>
-                <div class="actions">
-                    <button>Edit</button>
-                    <button>Delete</button>
-                    <button>Copy</button>
-                </div>
-            </article>
-
-
-
-            <article class="note">
-                <h3>Work</h3>
-                <p>Complete JS Project</p>
-                <div class="actions">
-                    <button>Edit</button>
-                    <button>Delete</button>
-                    <button>Copy</button>
-                </div>
-            </article>
-        </section>
-        
+        <article class="note">
+          <h3>Work</h3>
+          <p>Complete JS Project</p>
+          <div class="actions">
+            <button>Edit</button>
+            <button>Delete</button>
+            <button>Copy</button>
+          </div>
+        </article>
+      </section>
     </main>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
