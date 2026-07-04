@@ -12,19 +12,20 @@ modal.classList.remove("hidden");
 })
 
 saveBtn.addEventListener('click',function() {
-    const note = document.createElement("article")
+    if(titleInput.value.trim()==="" || contentInput.value.trim()==="") {
+    return ;
+}
+const note = document.createElement("article")
 const title = document.createElement("h3")
 const paragraph = document.createElement("p")
 const edit = document.createElement("button")
 const del = document.createElement("button")
 const copy = document.createElement("button") 
-paragraph.textContent = "Buy Milk" ;
 edit.textContent = "Edit" ;
 del.textContent = "Delete" ;
 copy.textContent = "Copy" ;
-// title.textContent = "Title" ;
-title.textContent =  titleInput.value ;
-paragraph.textContent = contentInput.value ;
+title.textContent =  titleInput.value.trim() ;
+paragraph.textContent = contentInput.value.trim() ;
 const container = document.createElement("div") ;
 container.appendChild(edit) ;
 container.appendChild(del) ;
@@ -35,8 +36,19 @@ note.classList.add('note') ;
 container.classList.add('actions') ;
 note.appendChild(container) ;
 notesContainer.appendChild(note) ;
+titleInput.value = "";
+contentInput.value = "";
+
+
+del.addEventListener('click',function() {
+    note.remove() ;
+})
+
 modal.classList.add("hidden") ;
 })
 cancelBtn.addEventListener('click',function() {
+    titleInput.value = "" ;
+    contentInput.value = "" ;
     modal.classList.add('hidden') ;
 })
+
