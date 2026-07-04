@@ -7,33 +7,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <Main>
+    <main>
 
-        <hr>
         <h1>Notes App</h1>
-        <hr>
-        <h2>Search Notes</h2>
-        <hr>
-        <h2>+ Add Note</h2>
-        <hr>
-        
-        <ul>
-            <li>Shopping</li>
-            <li>Buy Milk</li>
-            <li>Edit Delete Copy</li>
-        </ul>
 
-        <hr>
-        <hr>
+        <label for="search">Search Notes</label>
+        <input type="text" name="search" id="search" placeholder="Search Notes...">
 
-        <ul>
-            <li>Work</li>
-            <li>Complete JS Project</li>
-            <li>Edit Delete Copy</li>
-        </ul>
-        <hr>
+        <button>+ Add Note</button>
+
         
-    </Main>
+
+        <section class="notes-container">
+
+            <article class="note">
+                <h3>Shopping</h3>
+                <p>Buy Milk</p>
+                <div class="actions">Edit Delete Copy</div>
+            </article>
+
+
+
+            <article class="note">
+                <h3>Work</h3>
+                <p>Complete JS Project</p>
+                <div class="actions">Edit Delete Copy</div>
+            </article>
+        </section>
+        
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
