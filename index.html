@@ -7,14 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
+    <main class="todo">
 
         <h1>Notes App</h1>
+        
+        <div class="search-container">
+            <label for="search">Search Notes</label>
+            <input type="text" name="search" id="search" placeholder="Search Notes...">
+        </div>
 
-        <label for="search">Search Notes</label>
-        <input type="text" name="search" id="search" placeholder="Search Notes...">
-
-        <button>+ Add Note</button>
+        <div class="add-note">
+            <button>+ Add Note</button>
+        </div>
 
         
 
@@ -23,7 +27,11 @@
             <article class="note">
                 <h3>Shopping</h3>
                 <p>Buy Milk</p>
-                <div class="actions">Edit Delete Copy</div>
+                <div class="actions">
+                    <button>Edit</button>
+                    <button>Delete</button>
+                    <button>Copy</button>
+                </div>
             </article>
 
 
@@ -31,7 +39,11 @@
             <article class="note">
                 <h3>Work</h3>
                 <p>Complete JS Project</p>
-                <div class="actions">Edit Delete Copy</div>
+                <div class="actions">
+                    <button>Edit</button>
+                    <button>Delete</button>
+                    <button>Copy</button>
+                </div>
             </article>
         </section>
         
